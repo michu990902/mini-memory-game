@@ -1,0 +1,21 @@
+.button{
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    margin-top: 50px;
+    color: var(--font-color1);
+    padding: 10px 25px;
+    outline: none;
+    cursor: pointer;
+    border: 3px solid var(--font-color1);
+    &:focus, &:hover{
+        border: 3px solid var(--item-color);
+    }
+    &:disabled{
+        filter: brightness(50%);
+        cursor: not-allowed;
+        &:focus, &:hover{
+            border: 3px solid var(--font-color1);
+        }
+    }
+}

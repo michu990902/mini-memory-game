@@ -1,0 +1,43 @@
+.card{
+    position: relative;
+    padding-bottom: 100%;
+    cursor: pointer;
+    transition: transform 0.3s;
+    transform-style: preserve-3d;
+    border: none;
+    outline: none;
+    background: transparent;
+
+    &::after, &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        background-color: var(--item-disabled-color);
+    }
+    &::after{
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    &::before{
+        background-color: var(--item-color);
+    }
+    &:hover{
+        &::after{
+            box-shadow: 3px 0 var(--item-color);
+        }
+    }
+}
+
+.cardFail{
+    &::before{
+        background-color: var(--fail-color);
+    }
+}
+
+.active{
+    transform: rotateY(180deg);
+}

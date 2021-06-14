@@ -1,0 +1,15 @@
+.textField{
+    max-width: 100%;
+    border: none;
+    background: transparent;
+    font-size: 30px;
+    color: var(--font-color1);
+    padding: 5px;
+    margin-top: 20px;
+    outline: none;
+    border-bottom: 3px solid var(--font-color1);
+    text-align: center;
+    &:focus{
+        border-bottom: 3px solid var(--item-color);
+    }
+}
